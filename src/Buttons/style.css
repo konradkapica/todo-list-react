@@ -1,0 +1,44 @@
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.buttons__button {
+    background: none;
+    border: none;
+    padding: 21px;
+    color: teal;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        justify-content: center;
+        padding-top:0px;
+    }
+}
+
+.buttons__button:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.buttons__button:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    color: #ccc;
+    cursor: default;
+}
