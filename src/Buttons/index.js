@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTasks }) => (
-
     <div className="buttons">
         {tasks.length > 0 && (
             <React.Fragment>
@@ -18,7 +17,6 @@ const Buttons = ({ tasks, hideDoneTasks }) => (
             </React.Fragment>
         )}
     </div>
-
 );
 
 export default Buttons;

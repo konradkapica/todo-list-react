@@ -26,7 +26,7 @@
 @media (max-width: 767px) {
     .buttons__button {
         justify-content: center;
-        padding-top:0px;
+        padding-top: 0px;
     }
 }
 
