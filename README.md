@@ -11,12 +11,14 @@ Simple To-Do List application using JavaScript. Add a new task to do, cklick the
 - HTML
 - CSS
 - React
+- create-react-app
+- Webpack
+- Babel
 - Flex
 - Grid
 - BEM
 - ES6+
 - GIT
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
