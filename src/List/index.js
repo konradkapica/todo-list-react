@@ -1,8 +1,8 @@
 import "./style.css";
 
-const List = ({tasks, hideDone}) => (
+const List = ({ tasks, hideDone, removeTask }) => (
    <ul className="list">
-      {tasks.map(({id, content, done}) => (
+      {tasks.map(({ id, content, done }) => (
          <li
             key={id}
             className={`list__item ${hideDone && done ? "list__item--hide" : ""}`}
@@ -13,7 +13,12 @@ const List = ({tasks, hideDone}) => (
             <p className={`${done ? " list__item--done" : ""}`}>
                {content}
             </p>
-            <button className="list__button list__button--remove">🗑</button>
+            <button
+               className="list__button list__button--remove"
+               onClick={() => removeTask(id)}
+            >
+               🗑
+            </button>
          </li>
       ))}
    </ul>
