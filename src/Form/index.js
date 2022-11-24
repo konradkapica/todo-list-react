@@ -11,7 +11,7 @@ const Form = ({ addNewTask }) => {
 
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
-    }
+    };
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
