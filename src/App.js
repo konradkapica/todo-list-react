@@ -4,26 +4,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { useState, useEffect } from "react";
-
-const useLocalStorageState = (keyName, initialValue) => {
-  const getInitialState = () => {
-    const LocalStorageTasks = localStorage.getItem(keyName);
-    if (LocalStorageTasks === null) {
-      return initialValue;
-    }
-
-    return JSON.parse(localStorage.getItem(keyName))
-  };
-
-  const [state, setState] = useState(getInitialState);
-
-  useEffect(() => {
-    localStorage.setItem(keyName, JSON.stringify(state));
-  }, [keyName, state]);
-
-  return [state, setState];
-};
+import { useLocalStorageState } from "./useLocalStorageState"
 
 function App() {
   const [tasks, setTasks] = useLocalStorageState("tasks", []);
