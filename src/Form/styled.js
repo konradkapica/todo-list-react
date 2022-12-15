@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -21,22 +21,22 @@ export const Input = styled.input`
 
 export const Button = styled.button`
     height: 40px;
-    background-color: teal;
+    background-color: ${({ theme }) => theme.colors.primaryColor};
     color: white;
     padding: 10px;
     border: none;
     transition: 0.3s;
 
     &:hover {
-        background-color: hsl(180, 100%, 30%);
+        background-color: ${({ theme }) => theme.colors.buttonHover};
         transform: scale(1.1);
     }
 
     &:active {
-    background-color: hsl(180, 100%, 35%);
+        background-color: ${({ theme }) => theme.colors.buttonActive};
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         flex-grow: 1;
         align-self: stretch;
     }

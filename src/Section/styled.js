@@ -10,7 +10,7 @@ export const Title = styled.h2`
     padding: 21px;
     font-size: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         border: none;
         display: grid;
         grid-column-end: span 2;
@@ -25,7 +25,7 @@ export const Header = styled.header`
     margin-top: 10px;
     border-bottom: 2px solid rgb(211, 211, 211);
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 10px;

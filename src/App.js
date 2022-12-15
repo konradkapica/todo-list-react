@@ -6,6 +6,8 @@ import Header from "./Header";
 import Container from "./Container";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
+import { theme } from "./theme"
+import { ThemeProvider } from "styled-components"
 
 function App() {
 
@@ -24,33 +26,35 @@ function App() {
   } = useTasks();
 
   return (
-    <Container>
-      <Header title="Lista zadań" />
-      <Section
-        title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
-      />
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Header title="Lista zadań" />
+        <Section
+          title="Dodaj nowe zadanie"
+          body={<Form addNewTask={addNewTask} />}
+        />
 
-      <Section
-        title="Lista zadań"
-        body={
-          <List
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />
-        }
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />
-        }
-      />
-    </Container>
+        <Section
+          title="Lista zadań"
+          body={
+            <List
+              tasks={tasks}
+              hideDone={hideDone}
+              removeTask={removeTask}
+              toggleTaskDone={toggleTaskDone}
+            />
+          }
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+              setAllDone={setAllDone}
+            />
+          }
+        />
+      </Container>
+    </ThemeProvider>
   );
 }
 
