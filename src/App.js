@@ -3,7 +3,7 @@ import List from "./List";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
+import { Container } from "./Container/styled";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
 import { theme } from "./theme"
