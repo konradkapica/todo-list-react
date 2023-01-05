@@ -12,6 +12,7 @@ Simple To-Do List application using JavaScript. Add a new task to do, cklick the
 - CSS
 - React
 - create-react-app
+- Redux
 - Webpack
 - Babel
 - Flex
