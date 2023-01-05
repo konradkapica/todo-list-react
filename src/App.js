@@ -1,61 +1,9 @@
-import Form from "./Form";
-import List from "./List";
-import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
-import { Container } from "./Container/styled";
-import { useLocalStorageState } from "./useLocalStorageState";
-import { useTasks } from "./useTasks";
-import { theme } from "./theme"
-import { ThemeProvider } from "styled-components"
+import Tasks from "./features/tasks/Tasks";
 
 function App() {
-
-  const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
-
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
-  };
-
-  const {
-    tasks,
-    removeTask,
-    toggleTaskDone,
-    addNewTask,
-    setAllDone,
-  } = useTasks();
-
-  return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Header title="Lista zadań" />
-        <Section
-          title="Dodaj nowe zadanie"
-          body={<Form addNewTask={addNewTask} />}
-        />
-
-        <Section
-          title="Lista zadań"
-          body={
-            <List
-              tasks={tasks}
-              hideDone={hideDone}
-              removeTask={removeTask}
-              toggleTaskDone={toggleTaskDone}
-            />
-          }
-          extraHeaderContent={
-            <Buttons
-              tasks={tasks}
-              hideDone={hideDone}
-              toggleHideDone={toggleHideDone}
-              setAllDone={setAllDone}
-            />
-          }
-        />
-      </Container>
-    </ThemeProvider>
-  );
+    return (
+        <Tasks />
+    );
 }
 
 export default App;
