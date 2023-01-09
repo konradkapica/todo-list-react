@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom"
 
 export const TasksList = styled.ul`
     list-style: none;
@@ -14,7 +15,7 @@ export const Item = styled.li`
     grid-template-columns: auto 1fr auto;
     align-items: center;
     grid-gap: 10px;
-
+    
     ${({ hide }) => hide && css`
         display: none;
     `}
@@ -24,6 +25,20 @@ export const Content = styled.p`
     ${({ done }) => done && css`
         text-decoration: line-through;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primaryColor};
+    transition: 0.3s;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.buttonHover};
+    }
+
+    &:active {
+        color: ${({ theme }) => theme.colors.buttonActive};
+    }
 `;
 
 export const Button = styled.button`
