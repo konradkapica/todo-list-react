@@ -33,6 +33,9 @@ const tasksSlice = createSlice({
             state.tasks = tasks;
             state.loadingExampleTasks = false;
         },
+        loadingExampleTasksError: (state) => {
+            state.loadingExampleTasks = false;
+        }
     },
 });
 
@@ -44,6 +47,7 @@ export const {
     setAllDone,
     fetchExampleTasks,
     setTasks,
+    loadingExampleTasksError
 } = tasksSlice.actions;
 
 const selectTaskState = state => state.tasks;
