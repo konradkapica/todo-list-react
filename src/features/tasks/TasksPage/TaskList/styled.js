@@ -51,6 +51,7 @@ export const Button = styled.button`
     align-items: center;
     padding: 0;
     transition: 0.3s;
+    cursor: pointer;
 `;
 
 export const DoneButton = styled(Button)`

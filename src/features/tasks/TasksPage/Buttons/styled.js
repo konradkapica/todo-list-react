@@ -21,6 +21,7 @@ export const Button = styled.button`
     justify-content: flex-end;
     align-items: center;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover {
         color: ${({ theme }) => theme.colors.buttonHover};
