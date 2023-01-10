@@ -1,7 +1,7 @@
 import { Container } from "../../common/Container/styled";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
-import { Paragraph } from "./styled";
+import { Paragraph, LastParagraph } from "./styled";
 
 function AuthorPage() {
     return (
@@ -14,9 +14,9 @@ function AuthorPage() {
                         <Paragraph>
                             <strong>Moją pasją jest muzyka.</strong> Od 6 roku życia zajmuję się nią codziennie. Gram na instrumentach perkusyjnych od 15 lat. Interesuje mnie głównie <i>jazz, funky i czasem pop.</i> Grając z orkiestrą zwiedziłem kilka kontynentów, co jeszcze bardziej motywuje mnie do pogłębiania pasji 🏝️
                         </Paragraph>
-                        <Paragraph>
+                        <LastParagraph>
                             Poza muzyką jestem również <strong>aktorem i fotografem.</strong> <em>Sztuka</em> znaczy dla mnie o wiele więcej niż można przypuszczać! 🚀
-                        </Paragraph>
+                        </LastParagraph>
                     </>
                 }
             />
