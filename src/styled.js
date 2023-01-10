@@ -12,6 +12,7 @@ export const StyledNavigation = styled.nav`
 
 export const NavigationList = styled.ul`
     list-style: none;
+    padding: 0;
     display: flex;
     gap: 40px;
 `;
@@ -22,5 +23,9 @@ export const StyledNavLink = styled(NavLink)`
     
     &.active {
         font-weight: 700;
+    }
+
+    &:hover {
+        text-decoration: underline;
     }
 `;
