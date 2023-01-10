@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-    background-color: white;
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;

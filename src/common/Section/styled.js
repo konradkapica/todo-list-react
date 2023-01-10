@@ -31,3 +31,8 @@ export const Header = styled.header`
         padding-bottom: 10px;
     }
 `;
+
+export const StyledBody = styled.div`
+    background-color: white;
+    padding: 20px;
+`;

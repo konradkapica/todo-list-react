@@ -5,7 +5,7 @@ export const TasksList = styled.ul`
     list-style: none;
     background-color: white;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 `;
 
 export const Item = styled.li`
