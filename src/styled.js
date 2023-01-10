@@ -13,7 +13,7 @@ export const StyledNavigation = styled.nav`
 export const NavigationList = styled.ul`
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
