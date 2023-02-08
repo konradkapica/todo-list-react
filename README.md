@@ -3,7 +3,7 @@
 ![image](./src/images/ToDo%20List%20.png)
 ## 💻 Demo
 
-[ToDo List demo](https://rudolfini.github.io/todo-list-react/)
+[ToDo List demo](https://konradkapica.github.io/todo-list-react/)
 ## 📋 Description
 
 Simple To-Do List application using React.js. Add a new task to do, cklick the green button if it is done and hide done tasks with "Ukryj ukończone". You can mark all tasks as 'done' using "Ukończ wszystkie" button.  Use the red button to remove task from the list. In "Wyszukaj zadania" section you can find the task you are looking for. In "O autorze" tab you can read some info about the author of the application.
